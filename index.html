@@ -1,3 +1,42 @@
-//1. I can see the wather in my current location
-//2. I can see a different icon or background image depending on the weather
-//3. I can push a button to toggle between Fahrenheit and Celsius
+<!-- 1. I can see the weather in my current location
+2. I can see a different icon or background image depending on the weather
+3. I can push a button to toggle between Fahrenheit and Celsius
+ -->
+
+ <!-- API key: 8d33069c47bb58b1671aa96f7063b548
+ ex: api.openweathermap.org/data/2.5/weather?zip=94040,us&units=imperial&APPID=8d33069c47bb58b1671aa96f7063b548
+ ex: api.openweathermap.org/data/2.5/weather?zip=94040,us&units=metric&APPID=8d33069c47bb58b1671aa96f7063b548
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 	<title>Should I Go Outside?</title>
+
+ 	<link href="style.css" rel="stylesheet">
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" 	
+ 			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  			crossorigin="anonymous">
+  	</script>
+ </head>
+ <body>
+ 	<div class="content">
+ 		<div class="current">
+ 			<p>It is currently <span id="temp">Temp F</span> in <span id="local"></span></p>
+ 			<p>Get outside and take a look at the <span id="skies">Type</span></p>
+ 		</div>
+
+ 		<form class="zip">
+ 			<label>Zip Code</label>
+ 			<input type="number" maxlength="5">
+ 			<input type="submit">
+ 		</form>
+ 	</div>
+
+ 	<script src="app.js"></script>
+ </body>
+ </html>
