@@ -21,17 +21,20 @@
  </head>
  <body>
  	<div class="content">
+ 		<h1>Current Weather Conditions</h1>
+ 		<div id="local">-</div>
  		<div class="current">
- 			<p>It is currently <span id="temp" class="Fahrenheit">...</span> in <span id="local">your city</span></p>
- 			<p>Get outside and take a look at the <span id="skies">beautiful world around you!</span></p>
- 			<div id="icon"><img src=""></div>
+ 			<div id="temp">...</div>
+ 			<div id="skies">It's a beautiful world outside</div>
  		</div>
 
- 		<form class="zip">
- 			<label>Zip Code</label>
- 			<input type="number" maxlength="5">
- 			<input type="submit">
+ 		<form id="zipForm">
+ 			<p>Need to find the weather somewhere else?</p>
+ 			<input type="text" maxlength="5" id="zipInput" placeholder="Enter 5-Digit Zip Code Here" />
+ 			<input type="button" onclick="getWeatherZip(zipInput);" value="Submit" class="submitButton" />
+ 			<p>At this time, only US Postal Code searches are supported</p>
  		</form>
+ 			<p class="error"></p>
  	</div>
 
  	<script src="app.js"></script>
