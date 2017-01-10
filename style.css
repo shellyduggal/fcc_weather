@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	color: #1B435D;
+	font-family: 'Oswald', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -67,19 +69,28 @@ img, iframe, video, object {
 /***********
 CONTENT
 ***********/
+body {
+	background: url('https://cdn.pixabay.com/photo/2012/10/26/01/38/cold-front-63037_1280.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
 .content {
 	width: 66%;
-	margin: 10% auto;
+	margin: 15% auto;
 	text-align: center;
+	font-size: 3vw;
+	background-color: rgba(187, 191, 192, 0.6);
+	text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+	border-radius: 6px;
+	padding: 2%;
 }
 
 .current {
-	margin: 10% auto;
+	margin: 5% auto;
 }
 
 span {
 	font-weight: bold;
-	color: red;
 }
 
 .zip {
