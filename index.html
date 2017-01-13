@@ -1,8 +1,3 @@
-<!-- 1. I can see the weather in my current location
-2. I can see a different icon or background image depending on the weather
-3. I can push a button to toggle between Fahrenheit and Celsius
- -->
-
  <!DOCTYPE html>
  <html>
  <head>
@@ -13,7 +8,9 @@
  	<title>Should I Go Outside?</title>
 
  	<link href="style.css" rel="stylesheet">
- 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">  <!--Google Fonts -->
+ 	<!--Google Fonts -->
+ 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+ 	<!-- jQuery -->
  	<script src="https://code.jquery.com/jquery-3.1.1.min.js" 	
  			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   			crossorigin="anonymous">
@@ -21,21 +18,43 @@
  </head>
  <body>
  	<div class="content">
- 		<h1>Current Weather Conditions</h1>
- 		<div id="local">-</div>
- 		<div class="current">
- 			<div id="temp">...</div>
- 			<div id="skies">It's a beautiful world outside</div>
+ 		<div class="head">
+	 		<h1>Current Weather Conditions</h1>
+	 		<p id="local"></p> <!-- City name and country code -->
+	 		<p class="error" id="noLoc"></p> <!--Geolocation errors -->
  		</div>
-
+ 		
+ 		<div class="flex-container">
+ 			<div class="current">
+	 			<div id="temp">...</div>
+	 			<div id="skies">It's a beautiful world outside</div>
+	 		</div>
+	 		<div class="extra"> <!-- Hides on mobile -->
+	 			<p class="label">Atmospheric Pressure</p>
+	 			<p class="info" id="pressure"></p>
+	 			<hr>
+	 			<p class="label">Humidity</p>
+	 			<p class="info" id="humidity"></p>
+	 			<hr>
+	 			<p class="label">Wind</p>
+	 			<p class="info" id="wind"></p>
+	 		</div>
+ 		</div>
+ 		
+ 		<!-- Manual weather look up -->
  		<form id="zipForm">
- 			<p>Need to find the weather somewhere else?</p>
- 			<input type="text" maxlength="5" id="zipInput" placeholder="Enter 5-Digit Zip Code Here" />
- 			<input type="button" onclick="getWeatherZip(zipInput);" value="Submit" class="submitButton" />
- 			<p>At this time, only US Postal Code searches are supported</p>
+ 			<p>Need to find the weather somewhere else? Just enter the 5-digit zip code below:</p>
+ 			<input type="text" maxlength="5" id="zipInput" placeholder="US Postal Code" />
+ 			<input type="button" onclick="getWeatherZip(zipInput.value);" value="Submit" class="submitButton" />
+ 			<p>Only 5-digit postal code searches are supported at this time</p>
  		</form>
- 			<p class="error"></p>
+ 		
+ 		<p class="error" id="noZip"></p> <!-- Zip Code lookup errors -->
+		<p>21 Beans Web Creations - Copyright 2017</p>
+
  	</div>
+
+ 	
 
  	<script src="app.js"></script>
  </body>
