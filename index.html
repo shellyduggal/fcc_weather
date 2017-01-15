@@ -20,14 +20,14 @@
  	<div class="content">
  		<div class="head">
 	 		<h1>Current Weather Conditions</h1>
-	 		<p id="local"></p> <!-- City name and country code -->
 	 		<p class="error" id="noLoc"></p> <!--Geolocation errors -->
  		</div>
  		
  		<div class="flex-container">
  			<div class="current">
-	 			<div id="temp">...</div>
-	 			<div id="skies">It's a beautiful world outside</div>
+	 			<p id="local">Loading</p> <!-- City name and country code -->
+	 			<p id="temp">...</p>
+	 			<p id="skies">It's a beautiful world outside</p>
 	 		</div>
 	 		<div class="extra"> <!-- Hides on mobile -->
 	 			<p class="label">Atmospheric Pressure</p>
@@ -43,14 +43,15 @@
  		
  		<!-- Manual weather look up -->
  		<form id="zipForm">
- 			<p>Need to find the weather somewhere else? Just enter the 5-digit zip code below:</p>
+ 			<p>Need to find the weather somewhere else? Enter the postal code below:</p>
  			<input type="text" maxlength="5" id="zipInput" placeholder="US Postal Code" />
  			<input type="button" onclick="getWeatherZip(zipInput.value);" value="Submit" class="submitButton" />
  			<p>Only 5-digit postal code searches are supported at this time</p>
+ 			<p class="error" id="noZip"></p> <!-- Zip Code lookup errors -->
  		</form>
  		
- 		<p class="error" id="noZip"></p> <!-- Zip Code lookup errors -->
-		<p>21 Beans Web Creations - Copyright 2017</p>
+ 		
+		<p class="tm">21 Beans Web Creations - Copyright 2017</p>
 
  	</div>
 

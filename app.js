@@ -54,7 +54,6 @@ function displayError(error) {
     3: 'Automatic location unavailable at this time, please enter your zip code below [E.03]'
   };
   $("#noLoc").html(errors[error.code]);
-  console.log(errors[error.code]);
 }
 
 //Add weatherData to HTML //Called at app.js.35
@@ -129,7 +128,7 @@ $("#temp").on("click", function(){
 
 //Function to check weather by zip code lookup //Called in index.html.48
 function getWeatherZip(zipCode) {
-	$("#noLoc").html("");
+	$(".error").html("");
 	if (validZip(zipCode)) { //Defined at app.js.165
 		$.ajax({
 			url: "http://api.openweathermap.org/data/2.5/weather",
