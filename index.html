@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
- 	<title>Should I Go Outside?</title>
+ 	<title>Current Local Weather</title>
 
  	<link href="style.css" rel="stylesheet">
  	<!--Google Fonts -->
@@ -25,7 +25,7 @@
  		
  		<div class="flex-container">
  			<div class="current">
-	 			<p id="local"></p> <!-- City name and country code -->
+	 			<p id="local"></p> <!-- City name, state, country -->
 	 			<p id="temp">...</p>
 	 			<p id="skies">It's a beautiful world outside</p>
 	 		</div>
@@ -46,13 +46,15 @@
  			<p>Need to find the weather somewhere else? Enter the postal code below:</p>
  			<input type="text" maxlength="5" id="zipInput" placeholder="US Postal Code" />
  			<input type="button" onclick="getWeatherZip(zipInput.value);" value="Submit" class="submitButton" />
- 			<p>Only 5-digit postal code searches are supported at this time</p>
+ 			<p>Only US postal code searches are supported at this time</p>
  			<p class="error" id="noZip"></p> <!-- Zip Code lookup errors -->
  		</form>
  		
+ 		<footer>
+ 			<img src="http://res.cloudinary.com/duggalsf/image/upload/v1484536420/Weather/wulogo.png" alt="Powered by Weather Underground">
+			<p>21 Beans Web Creations - Copyright 2017</p>
+ 		</footer>
  		
-		<p class="tm">21 Beans Web Creations - Copyright 2017</p>
-
  	</div>
 
  	
