@@ -59,25 +59,41 @@ function changeBackground(type) {
 		case "mostlysunny":
 			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484532515/Weather/background-21717_1280_m3fd2x.jpg)");
 			break;
+		case "nt_clear":
+		case "nt_sunny":
+		case "nt_mostlysunny":
+			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484547455/night-sky-523892_1280_bpux46.jpg)");
+			break;
 		case "cloudy":
 		case "mostlycloudy":
 		case "partlysunny":
 		case "partlycloudy":
+		case "nt_cloudy":
+		case "nt_mostlycloudy":
+		case "nt_partlysunny":
+		case "nt_partlycloudy":
 			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484532515/Weather/clouds-210649_1280_bbzg0g.jpg)");
 			break;
 		case "rain":
+		case "nt_rain":
 			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484532515/Weather/drip-871152_1280_zyf8yj.jpg)"); 
 			break;
 		case "tstorms":
 		case "sleet":
+		case "nt_tstorms":
+		case "nt_sleet":
 			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484532515/Weather/california-1768742_1280_exsnus.jpg)"); 
 			break;
+		case "nt_flurries":
+		case "nt_snow":
 		case "flurries":
 		case "snow":
 			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484532515/Weather/kermit-601711_1280_tlj5sl.jpg)"); 
 			break;
 		case "hazy":
 		case "fog":
+		case "nt_hazy":
+		case "nt_fog":
 			$("body").css("background-image", "url(http://res.cloudinary.com/duggalsf/image/upload/v1484532515/Weather/mountains-889131_1280_o7dewz.jpg)"); 
 			break;
 	}
