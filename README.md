@@ -1,5 +1,5 @@
-# Local Weather App
-![Live](http://www.21beans.com/weather) *Live Demo*
+# Local Weather App 
+[Live Demo at 21beans.com](http://www.21beans.com/weather)
 
 The Local Weather App automatically checks a user's location using the Weather Underground API and displays the current weather conditions. 
 * There is an optional zip code lookup for the user to check the current weather conditions in other locations (this feature only supports US postal codes due to limitations of the Weather Underground API). 
